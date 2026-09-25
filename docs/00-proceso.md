@@ -1,0 +1,16 @@
+# Bitácora de proceso
+
+Cronológica. Las decisiones están en [`02-decisiones.md`](02-decisiones.md) y lo pendiente en [`03-pendientes.md`](03-pendientes.md); acá solo queda qué se hizo y con qué trazabilidad.
+
+## 2026-09-25, sesión 1
+- Se revisó el prompt (`docs/prompt/prompt_notibatch_v2.md`, único archivo de la carpeta) y se convocó al Consejo ([`01`](01-consejo-directivo.md)).
+- Se escribió el andamiaje Gradle y el arnés de Fase 0 (`src/debug`). Sin compilar (sin JDK/SDK en la PC).
+- Versiones (ADR-0009) tomadas de búsqueda web ese día; sin verificar en compilación.
+
+## 2026-09-25, sesión 2
+- Se retomó la sesión 1, que había quedado sin commit ni repo ni los docs 04/05/CLAUDE.md.
+- Repo privado creado: `facund02401/notibatch` (ADR-0001). Commit inicial con el andamiaje.
+- Lógica pura de la Fase 1 adelantada (ADR-0002): `rules` (retención, OTP, insistencia) y `scheduling` (perfiles, próxima entrega), con tests JUnit. **Escritos pero sin ejecutar**: no hay JDK (P1).
+- Escritos `04-fase0-viabilidad.md`, `05-checklist-manual.md`, `CLAUDE.md` y `README.md`.
+- Desvío del prompt anotado: retención por app elegida en vez de "retener todo" (P4, recomendación del Consejo, pendiente de confirmar).
+- Decisión de diseño en `NextDelivery`: si ya no quedan horas fijas en la ventana, se libera al cierre de la ventana (`activeTo`), no antes ni después.
