@@ -21,4 +21,4 @@ App Android nativa (Kotlin, Compose/M3 desde la Fase 2, minSdk 26) de **uso pers
 - Log de la sonda: `adb logcat -s NotiBatchProbe:I`
 
 ## Estado
-Ver `docs/00-proceso.md` y `docs/03-pendientes.md`. Toolchain instalada en esta PC: JDK 21 Temurin (`JAVA_HOME`) y SDK en `%LOCALAPPDATA%\Android\Sdk` (`local.properties`, no versionado). Build debug y 30 tests unitarios en verde.
+Ver `docs/00-proceso.md` y `docs/03-pendientes.md`. Toolchain instalada en esta PC: JDK 21 Temurin (`JAVA_HOME`) y SDK en `%LOCALAPPDATA%\Android\Sdk` (`local.properties`, no versionado). Build debug y 51 tests unitarios en verde.

@@ -20,3 +20,9 @@ Cronológica. Las decisiones están en [`02-decisiones.md`](02-decisiones.md) y 
 - `./gradlew testDebugUnitTest assembleDebug`: **BUILD SUCCESSFUL, 30 tests en verde**. Las versiones de ADR-0009 (AGP 9.4.0, compileSdk/targetSdk 37) funcionan.
 - Bug encontrado por el compilador: regex de `OtpDetector` con escapes inválidos en string común; corregido con string crudo.
 - El instalador de Android Studio (`winget`) se colgó porque ignora el modo silencioso y abre una ventana; queda para instalar a mano.
+
+## 2026-09-25, sesión 2 (trabajo sin teléfono)
+- Adelantado lo que no depende de A vs. B (ADR-0002): `SenderKeys` (normalización + HMAC), `WaitingList` (solo RAM), `BatchSummary` (resumen con versión pública sin nombres), `DeliveryWatchdog` (atraso > doble), `PauseOptions`, `SeeNowCounter`, `StatusText` y borrador del mensaje de encuadre (P9), todos con tests: **51 tests en verde**.
+- `KeystoreCrypto` (AES-256-GCM + HMAC-SHA256 en Android Keystore, ADR-0006): **compila pero no se pudo ejecutar** (requiere dispositivo). Se prueba con el checklist manual.
+- Bug encontrado por un test: el resumen contaba mensajes de grupo en vez de grupos distintos.
+- Sigue bloqueado por la Fase 0: listener definitivo, decisión de snooze vs. base cifrada, y toda la UI.
