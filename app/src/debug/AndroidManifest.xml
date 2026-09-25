@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- SOLO variante debug (ADR-0010): arnés de Fase 0. No existe en release. -->
+    <application>
+        <service
+            android:name="app.notibatch.probe.ProbeListenerService"
+            android:exported="true"
+            android:label="NotiBatch sonda (debug)"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <!-- Protegido con DUMP: lo tiene adb shell, no las apps de terceros. -->
+        <receiver
+            android:name="app.notibatch.probe.ProbeControlReceiver"
+            android:exported="true"
+            android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="app.notibatch.probe.CONFIG" />
+                <action android:name="app.notibatch.probe.SNAPSHOT" />
+                <action android:name="app.notibatch.probe.SNOOZED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+# Versiones provisionales (ADR-0009): verificadas por búsqueda web el 2026-09-25,
+# NO compiladas todavía. Si Android Studio sugiere otras, actualizar y anotarlo.
+[versions]
+agp = "9.4.0"
+junit = "4.13.2"
+# Fase 2 (UI): descomentar junto con los plugins y dependencias de Compose.
+# composeBom = "2026.08.00"
+
+[libraries]
+junit = { module = "junit:junit", version.ref = "junit" }
+# compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+# AGP 9 trae Kotlin integrado. En Fase 2 se agrega el plugin de Compose:
+# kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version = "<misma versión de Kotlin que use AGP>" }

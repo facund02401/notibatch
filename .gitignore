@@ -1,0 +1,18 @@
+# Gradle / Android
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Claves y secretos: NUNCA se suben
+*.jks
+*.keystore
+keystore.properties
+
+# Herramientas locales
+.remember/
+.claude/
