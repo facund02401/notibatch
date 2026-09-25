@@ -14,3 +14,9 @@ Cronológica. Las decisiones están en [`02-decisiones.md`](02-decisiones.md) y 
 - Escritos `04-fase0-viabilidad.md`, `05-checklist-manual.md`, `CLAUDE.md` y `README.md`.
 - Desvío del prompt anotado: retención por app elegida en vez de "retener todo" (P4, recomendación del Consejo, pendiente de confirmar).
 - Decisión de diseño en `NextDelivery`: si ya no quedan horas fijas en la ventana, se libera al cierre de la ventana (`activeTo`), no antes ni después.
+
+## 2026-09-25, sesión 2 (toolchain)
+- Instalados: Temurin JDK 21 (winget), SDK de Android por `sdkmanager` (platform-tools, plataforma 37.0, build-tools 37.0.0; el build bajó además build-tools 36) en `%LOCALAPPDATA%\Android\Sdk`, wrapper de Gradle 9.8.0.
+- `./gradlew testDebugUnitTest assembleDebug`: **BUILD SUCCESSFUL, 30 tests en verde**. Las versiones de ADR-0009 (AGP 9.4.0, compileSdk/targetSdk 37) funcionan.
+- Bug encontrado por el compilador: regex de `OtpDetector` con escapes inválidos en string común; corregido con string crudo.
+- El instalador de Android Studio (`winget`) se colgó porque ignora el modo silencioso y abre una ventana; queda para instalar a mano.

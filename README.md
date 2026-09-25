@@ -2,7 +2,7 @@
 
 Entrega las notificaciones de WhatsApp en tandas a horas fijas, con excepciones (contactos, llamadas, alarmas, códigos). Uso personal, instalación por APK, sin red.
 
-**Estado:** Fase 0 (prueba de viabilidad) preparada, sin probar en teléfono. Nada de esto está compilado todavía: ver [`docs/03-pendientes.md`](docs/03-pendientes.md) (P1).
+**Estado:** Fase 0 (prueba de viabilidad) preparada, sin probar en teléfono. Compila y los tests unitarios pasan.
 
 ## Instalar (desarrollo)
 1. Abrí la carpeta en Android Studio (genera el wrapper de Gradle) o instalá JDK 21 + SDK de Android.

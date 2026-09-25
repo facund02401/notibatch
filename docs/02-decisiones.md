@@ -54,9 +54,9 @@ Fecha de todas: 2026-09-25 (sesión 1).
 - **Por qué:** los logs de Android los pueden leer `adb` y apps con `READ_LOGS` en algunos contextos; el requisito "logs sin contenido ni nombres" del prompt incluye la key.
 
 ## ADR-0009: Toolchain y versiones
-- **Estado:** Provisional (verificar en Android Studio; ver P1, P12).
+- **Estado:** Aceptada para AGP/Gradle/SDK 37 (compilan y pasan tests el 2026-09-25 con Gradle 9.8.0 y JDK 21); el resto Provisional (Compose, P12).
 - **Decisión:** AGP 9.4.0, Gradle según lo que pida AGP (el wrapper lo genera Android Studio), `compileSdk = 37`, `targetSdk = 37` ("último estable" según el prompt; fallback 36 si 37 da problemas), `minSdk = 26`, Kotlin incluido en AGP 9 + plugin de Compose recién en Fase 2, Compose BOM 2026.08.00 (Fase 2). Version catalog en `gradle/libs.versions.toml`.
-- **Por qué:** búsqueda web del 2026-09-25 (fuentes al final de [`00-proceso.md`](00-proceso.md)). **No se pudo compilar** en esta máquina (sin JDK ni Android SDK), así que las versiones están sin probar.
+- **Por qué:** búsqueda web del 2026-09-25 (fuentes al final de [`00-proceso.md`](00-proceso.md)). La compilación se verificó después de instalar la toolchain (ver `00-proceso.md`).
 
 ## ADR-0010: Arnés de Fase 0 solo en la variante `debug`
 - **Estado:** Aceptada.

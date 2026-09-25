@@ -5,7 +5,7 @@ Cada ítem trae la **recomendación del Consejo** (no es una decisión tomada).
 
 ## Bloqueantes
 
-### P1 🔴 Instalar la toolchain en esta PC (o compilar en Android Studio)
+### P1 ✅ Toolchain instalada (2026-09-25) — ver [`00-proceso.md`](00-proceso.md)
 - **Situación:** esta máquina no tiene JDK ni Android SDK. No pude compilar ni correr los tests. El código está escrito pero **sin compilar**.
 - **Opciones:** (a) instalás Android Studio y abrís el proyecto (genera el wrapper de Gradle); (b) me autorizás a instalar JDK 21 + Android command-line tools por `winget`/descarga (varios GB, modifica tu PC); (c) compilás en otra máquina.
 - **Recomendación:** (a) o (b). Con (b) puedo correr los tests de las reglas yo mismo.

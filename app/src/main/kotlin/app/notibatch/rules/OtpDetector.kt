@@ -12,7 +12,7 @@ object OtpDetector {
         RegexOption.IGNORE_CASE,
     )
     // 4 a 8 dígitos, opcionalmente con un guion o espacio en el medio (123-456, G-123456).
-    private val code = Regex("(?<![\d])(?:[A-Za-z]-)?\d{3,4}[- ]?\d{1,4}(?![\d])")
+    private val code = Regex("""(?<!\d)(?:[A-Za-z]-)?\d{3,4}[- ]?\d{1,4}(?!\d)""")
 
     fun looksLikeVerificationCode(text: CharSequence?): Boolean {
         if (text.isNullOrBlank()) return false
